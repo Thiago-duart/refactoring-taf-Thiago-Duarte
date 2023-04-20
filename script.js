@@ -11,6 +11,7 @@ function testHeigth(gender, heigth) {
 }
 
 function testBars(gender, barReps, barSeconds) {
+
     if (gender === 'male') {
         return barReps >= 6 || barSeconds >= 15
     }
@@ -32,6 +33,7 @@ function testAbs(gender, abs) {
 }
 
 function testRun(gender, runDistance, runTime) {
+
     if (gender === 'male') {
         return runDistance >= 3000 && runTime <= 720 || runDistance >= 5000 && runTime <= 1200
     }
@@ -42,6 +44,7 @@ function testRun(gender, runDistance, runTime) {
 }
 
 function testSwinAndDive(gender, swimDistance, swimTime, diveTime) {
+
     if (gender === 'male') {
         return swimDistance >= 100 && swimTime <= 60 || diveTime <= 30
     }
@@ -52,10 +55,12 @@ function testSwinAndDive(gender, swimDistance, swimTime, diveTime) {
 }
 
 function showMessage(message) {
+
     return message.toString().toUpperCase()
 }
 
 function areCandidateResultsValid(gender, heigth, barReps, barSeconds, abs, runDistance, runTime, swimDistance, swimTime, diveTime) {
+  
     let tafHeigth = testHeigth(gender, heigth)
     let tafBars = testBars(gender, barReps, barSeconds)
     let tafAbs = testAbs(gender, abs)
